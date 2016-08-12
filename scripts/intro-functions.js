@@ -15,7 +15,15 @@ var myObject = {
 
 function max(a, b){
     // YOUR CODE HERE
-}
+    var greatestNumber = 0;
+    if (a > b){
+      var greatestNumber = a;
+      return greatestNumber
+    } else{
+      var greatestNumber = b;
+      return greatestNumber
+    }
+};
 
 console.assert(max(1,3) === 3);
 console.assert(max(0,3) === 3);
@@ -33,6 +41,17 @@ console.assert(isNaN(max("aaa","bbb")));
 
 function maxOfThree(a, b, c){
     // YOUR CODE HERE
+    var greatestNumber = 0;
+    if (b < a && a > c){
+      var greatestNumber = a;
+      return greatestNumber
+    } else if (a < b && b > c){
+      var greatestNumber = b;
+      return greatestNumber
+    } else{
+      var greatestNumber = c;
+      return greatestNumber
+    }
 }
 
 console.assert(maxOfThree(1,3,2) === 3);
@@ -51,6 +70,12 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
 
 function isVowel(char){
     // YOUR CODE HERE
+    var vowelsArray = ["a", "e", "i", "o", "u"]
+    if (char[0] === vowelsArray.every()){
+      return true
+    } else {
+      return false
+    }
 }
 
 console.assert(isVowel(0) === false);
@@ -73,6 +98,12 @@ console.assert(isVowel("E") === true);
 
 function rovarspraket(text){
     // YOUR CODE HERE
+    var vowelsArray = ["a", "e", "i", "o" ,"u"]
+    if (text === vowelsArray.every()){
+      return text
+    } else{
+      
+    }
 }
 
 console.assert(rovarspraket("a") === "a")
