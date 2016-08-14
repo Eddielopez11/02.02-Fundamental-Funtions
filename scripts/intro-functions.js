@@ -18,10 +18,10 @@ function max(a, b){
     var greatestNumber = 0;
     if (a > b){
       var greatestNumber = a;
-      return greatestNumber
+      return greatestNumber;
     } else{
       var greatestNumber = b;
-      return greatestNumber
+      return greatestNumber;
     }
 };
 
@@ -44,15 +44,15 @@ function maxOfThree(a, b, c){
     var greatestNumber = 0;
     if (b < a && a > c){
       var greatestNumber = a;
-      return greatestNumber
+      return greatestNumber;
     } else if (a < b && b > c){
       var greatestNumber = b;
-      return greatestNumber
+      return greatestNumber;
     } else{
       var greatestNumber = c;
-      return greatestNumber
+      return greatestNumber;
     }
-}
+};
 
 console.assert(maxOfThree(1,3,2) === 3);
 console.assert(maxOfThree(0,3,-1) === 3);
@@ -70,13 +70,9 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
 
 function isVowel(char){
     // YOUR CODE HERE
-    var vowelsArray = ["a", "e", "i", "o", "u"]
-    if (char[0] === vowelsArray.every()){
-      return true
-    } else {
-      return false
-    }
-}
+    var outcome = char == "a" || char == "e" || char == "i" || char == "o" || char == "u";
+    return outcome;
+};
 
 console.assert(isVowel(0) === false);
 console.assert(isVowel("B") === false);
@@ -98,13 +94,30 @@ console.assert(isVowel("E") === true);
 
 function rovarspraket(text){
     // YOUR CODE HERE
-    var vowelsArray = ["a", "e", "i", "o" ,"u"]
-    if (text === vowelsArray.every()){
-      return text
-    } else{
-      
+    var rovarWord = "";
+    for (var i = 0; i < text.length; i++) {
+      var currentChar = text[i];
+      if (text === 0){
+        rovarWord += text;
+      } else if (!isVowel(currentChar)) {
+        rovarWord += currentChar + "o" + currentChar;
+      } else {
+        rovarWord += currentChar;
+      }
     }
-}
+    return rovarWord;
+};
+// var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// var rovarWord = "";
+// for(var i = 0; i < text.length; i++){
+//   var currentChar = text[i];
+//   if (!isVowel(currentChar){
+//     rovarWord += currentChar + "o" + currentChar;
+//   } else {
+//     rovarWord = text;
+//   }
+// return rovarWord;
+// }
 
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
@@ -121,8 +134,14 @@ console.assert(rovarspraket(0) === "0")
  * string "books".
  */
 
-function reverse(str){
+function reverse(string){
     // YOUR CODE HERE
+    var array;
+    // var reversed;
+    // array = string.split();
+    array = array.reverse();
+    // reversed = array.join()
+    return array;
 }
 
 console.assert(reverse("books") === "skoob")
@@ -139,6 +158,17 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 
 function findLongestWord(sentence){
     // YOUR CODE HERE
+    var rem = sentence.replace(/'/g, '')
+    var strings = rem.split(" ");
+    var currentWord = 0;
+    var longestWord = "";
+    for (var i = 0; i < strings.length; i++) {
+      if (strings[i].length > currentWord){
+        currentWord = strings[i].length
+        longestWord = strings[i];
+      }
+    }
+    return longestWord;
 }
 
 console.assert(findLongestWord("book dogs") === "book")
