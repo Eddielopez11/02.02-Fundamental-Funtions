@@ -30,9 +30,8 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
+var doSomethingCool = function(){console.log("Something Cool!")};
 
-
-}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -51,7 +50,9 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
-
+setTimeout(function(){
+  alert("Hello, World!");
+}, 2000);
 
 // -----------------------------------------------
 
@@ -81,8 +82,10 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
-
+// [c]: z then y
+// because even though var letter is x, its not logged, letter is then changed
+// to z and logged, then changed to y and logged. y comes second because there
+// is a delay on it
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -103,7 +106,7 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-var reverseStr = function
+var reverseStr = function(str) {return str.split("").reverse().join("")};
 
 // -----------------------------------------------
 
@@ -134,8 +137,10 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
-
-
+var colors = {rojo:"#ff0000", blanco:"#ffffff",
+azul:"0000ff", verde:"00ff00"}
+var spanishColor = function(colorName) {return this.colors};
+// idk how, moving on
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -151,7 +156,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo =
+          "bar";
 
 // -----------------------------------------------
 
@@ -173,7 +179,11 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
-
+var n = 0;
+var callNtimes = function(callback) {
+  var range = _.range(n);
+  _.each(range, callback);
+}
 
 // -----------------------------------------------
 
@@ -221,7 +231,7 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
-
+// it works so a little confused
 
 // -----------------------------------------------
 
