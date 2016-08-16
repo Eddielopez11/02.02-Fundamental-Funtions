@@ -70,7 +70,7 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
 
 function isVowel(char){
     // YOUR CODE HERE
-    var outcome = char == "a" || char == "e" || char == "i" || char == "o" || char == "u";
+    var outcome = char == "a" || char == "e" || char == "i" || char == "o" || char == "u" || char == "A" || char == "E" || char == "I" || char == "O" || char == "U";
     return outcome;
 };
 
@@ -136,11 +136,11 @@ console.assert(rovarspraket(0) === "0")
 
 function reverse(string){
     // YOUR CODE HERE
-    var array;
+    var array = string.split("");
     // var reversed;
     // array = string.split();
     array = array.reverse();
-    // reversed = array.join()
+    array = array.join("");
     return array;
 }
 
