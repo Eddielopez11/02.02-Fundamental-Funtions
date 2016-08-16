@@ -139,7 +139,10 @@ var spanishColor = function(colorName) {
 // Put your answer below -------------------------
 var colors = {rojo:"#ff0000", blanco:"#ffffff",
 azul:"0000ff", verde:"00ff00"}
-var spanishColor = function(colorName) {return this.colors};
+var spanishColor = function(colorName) {
+  console.log(spanishColor("blanco"));
+  return colors.colorName;
+};
 // idk how, moving on
 // -----------------------------------------------
 
@@ -229,9 +232,14 @@ var addNumbers = function(numberA, numberB) {
 };
 
 var twoPlusTwo = addNumbers(2,2);
-
+console.log(twoPlusTwo);
 // Put your answer below -------------------------
-// it works so a little confused
+var addNumbers = function(numberA, numberB) {
+  return (numberA + numberB);
+};
+
+var twoPlusTwo = addNumbers(2,2);
+console.log(twoPlusTwo);
 
 // -----------------------------------------------
 
@@ -255,10 +263,23 @@ var speed = 0;
 var accelerate = function(amount) {
   speed += amount;
 };
-
+console.log(accelerate())
+console.log(speed);
 // Put your answer below -------------------------
-
-
+// the above is being set to NaN or Not a Number when there is no input
+// because there is no number being input
+var speed = 0
+var accelerate = function(amount) {
+  if (amount >= 1){
+    speed += amount;
+  }else{
+    speed += 1;
+  }
+};
+console.log(accelerate());
+console.log(speed);
+console.log(accelerate(5));
+console.log(speed);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
